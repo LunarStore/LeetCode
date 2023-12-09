@@ -27,9 +27,6 @@ public:
                 }else{
                     return res;
                 }
-
-                while(second < third && nums[second] == num2) second++;
-                while(second < third && nums[third] == num3) third--;
             }
         }
 
