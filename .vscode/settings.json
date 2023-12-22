@@ -3,6 +3,7 @@
         "deque": "cpp",
         "string": "cpp",
         "vector": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "iostream": "cpp"
     }
 }
