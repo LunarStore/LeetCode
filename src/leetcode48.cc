@@ -21,6 +21,6 @@ public:
             }
         }
 
-        return matrix;
+        return;
     }
 };

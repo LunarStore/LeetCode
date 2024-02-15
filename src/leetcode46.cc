@@ -20,5 +20,6 @@ public:
     vector<vector<int>> permute(vector<int>& nums) {
         vector<vector<int>> res;
         backTrace(res, nums, 0);
+        return res;
     }
 };
