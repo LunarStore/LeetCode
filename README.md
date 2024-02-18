@@ -40,3 +40,34 @@
 ## 2024.2.15 -- [51-59]
 
 1. 56、57两到区间合并与插入的算法，在LevelDB中有工程运用，比如查找一层SST文件的重合算法。
+
+## 2024.2.18 -- [60-79]
+
+对于78题，思考一下以下代码的含义。和78的题解有什么区别？？？
+
+```cpp
+class Solution {
+    void backTrace(int index, vector<int> &nums, vector<int> &temp, vector<vector<int>> &out){
+        if(index >= nums.size()){
+            out.push_back(temp);
+            return;
+        }
+
+        for(int i = index; i < nums.size(); i++){
+            temp.push_back(nums[i]);
+            backTrace(i + 1, nums, temp, out);
+            temp.pop_back();
+        }
+    }
+public:
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<vector<int>> res;
+        vector<int> temp;
+
+        backTrace(0, nums, temp, res);
+        return res;
+    }
+};
+```
+
+解释一下72题的插入和删除操作在动态规划中的具体含义。
